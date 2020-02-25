@@ -13,7 +13,7 @@ struct SpotifyConstants {
     
     static let CLIENT_ID = "MY_CLIENT_ID"
     static let SESSION_KEY = "spotifySessionKey"
-    static let REDIRECT_URI = "spotifysignInexample://"
+    static let REDIRECT_URI = "MY_REDIRECT_URI"
     static let SCOPE = "user-read-email"
     
 }

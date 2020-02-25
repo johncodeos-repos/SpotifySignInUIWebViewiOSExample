@@ -92,9 +92,10 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: UIWebViewDelegate {
 
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        RequestForCallbackURL(request: navigationAction.request)
-        decisionHandler(.allow)
+    
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool {
+        RequestForCallbackURL(request: request)
+        return true
     }
 
     func RequestForCallbackURL(request: URLRequest) {
